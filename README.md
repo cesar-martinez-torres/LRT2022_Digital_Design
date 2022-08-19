@@ -1,5 +1,5 @@
 # Formatos_LRT2022
-repositorio de formatos Word y Tex para el curso LRT2022 Diseño digital, impartido en Universidad de las Américas Puebla (UDLAP).
+Repositorio de formatos Word y Tex para el curso LRT2022 Diseño digital, impartido en Universidad de las Américas Puebla (UDLAP).
 ## Template tex para reportes de laboratorio
 El template contiene diferentes carpetas
 * bib Incluye el archivo bibliografia.bib, es recomendable utilizar un gestor de referencias (JabRef, Zotero).
