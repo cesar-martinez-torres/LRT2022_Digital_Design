@@ -6,7 +6,6 @@
 \usepackage{here} %usar el comandao[H] Para fijar la posición de las imágenes
 \usepackage{multicol}
 \graphicspath{{Imagenes/}}
- 
 % Estilo de página y encabezados 
 % --------------------------------------------------------------------------------------------------------------------------------------------------------------
 \usepackage{fancyhdr}
@@ -70,25 +69,12 @@ Texto en negritas \textbf{negritas}
     \item item
     \item item
 \end{enumerate}
-
-
-Comando para citar  \cite{Johana}
+Comando para citar  \cite{gh1562}
 
 % Bibliografía 
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------
-\begin{thebibliography}{9}		
-
-\bibitem{Johana}
-   Johana, H.(2009)
-   \emph{Lineas Equipotenciales}.
-   Recuperado de: https://es.slideshare.net/guestd93ebf/infome-2-lineas-equipotenciales-y-campo-electrico
-
- \bibitem{Teresa}
-   Teresa, B. (2015)
-   \emph{Electo Est\'atica}.
-   Recuperado de: http://www2.montes.upm.es/
-   
-\end{thebibliography}
+\bibliographystyle{bst/IEEEtran} %Estilo de bibliografía NO MODIFICAR PARA MANTENER FORMATO
+\bibliography{bib/bibliografia} %Fuentes bibliográficas Se recomienda utilizar un gestor de referencias (zotero, jabref, etc..)
 
 % ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 \end{multicols}
