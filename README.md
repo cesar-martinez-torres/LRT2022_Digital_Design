@@ -16,11 +16,6 @@ Se recomienda utilizar cualquiera de las siguientes opciones:
 
 Nota: Ver los procesos de creación de cuenta o instalación para cada método. Si son principiantes en el uso de Latex, se recomienda utilizar Overleaf.
 
-## Template WORD para reportes de laboratorio
-El "template" de word es por el momento sólo una conversión automática de PDF>> WORD utilizando acorobat reader PRO, por lo tanto, los cuadros de código, tipos de letra, referencias , etc, tendrán que ser modificados y adecuados de forma manual.
-Las referencias deberán ser generadas de forma manual o utilizando el generador de referencias de Word. 
-
-
 La guía para referenciar, puede ser consultada en [IEEE Reference guide][1]
 
 [1]: https://ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE-Reference-Guide.pdf "Title"
