@@ -1,0 +1,34 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity RS is
+	 port(
+		 R : in STD_LOGIC;
+		 S : in STD_LOGIC;
+		 RELOJ: in STD_LOGIC;
+		 Q : out STD_LOGIC;
+		 Q1 : out STD_LOGIC
+	     );
+end RS;
+
+--}} End of automatically maintained section
+
+architecture FF_RS of RS is
+
+signal SAND1: STD_LOGIC;
+signal SAND2: STD_LOGIC;
+signal SNOR1: STD_LOGIC;
+signal SNOR2: STD_LOGIC;
+
+begin
+
+	-- enter your statements here --
+
+SAND1<=R AND RELOJ ;
+SAND2<=S AND RELOJ ; 
+Q<=SNOR1; 
+Q1<=SNOR2;
+SNOR1 <= SAND1 NOR SNOR2;
+SNOR2 <= SAND2 NOR SNOR1;
+
+end FF_RS;
