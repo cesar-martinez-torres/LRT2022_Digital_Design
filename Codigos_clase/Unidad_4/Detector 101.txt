@@ -1,0 +1,69 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity Det is
+	port(
+    Clock,Reset, x: in std_logic;
+    z: out std_logic;
+    --Close_CCW: out std_logic;
+    );
+ end Det;
+ 
+ architecture Det_arch of Det is
+
+type State_type is (A,B,C,D); -- Declarar todos los estados del problema
+signal current_state, next_state: State_type; -- Declaracion de señales, estado actual, estado futuro
+
+begin
+---------------- Memoria de estados
+STATE_MEMORY : process (Clock, Reset)
+begin
+	if (Reset= '0') then 
+		current_state <= A;
+	elsif (Clock'event and Clock='1') then 
+    	current_state <= next_state;
+    end if;
+end process;
+--------- Lógica estado siguiente
+NEXT_STATE_LOGIC : process(current_state, x)
+begin
+	case (current_state) is
+    	when A => if (x='1') then 
+        					next_state <= B;
+                         else
+                         	next_state <= A;
+                         end if;
+                         --------------------------- Estado
+        when B =>  if(x='1') then
+        					next_state <= B;
+                        else 
+                        	next_state <= C;
+                        end if;
+                        -----------------------------------Estado
+         when C =>  if(x='1') then
+        					next_state <= D;
+                        else 
+                        	next_state <= A;
+                        end if;
+                        -----------------------------------Estado
+        when D =>  if(x='1') then
+        					next_state <= B;
+                        else 
+                        	next_state <= C;
+                        end if;
+                        -----------------------------------Estado
+        when others => next_state <= A;
+     end case;
+end process;
+------------------ Logica de la salida
+OUTPUT_LOGIC : process (current_state)
+begin
+	case (current_state) is
+    	when A => z <= '0'; 
+        when B => z <= '0'; 
+        when C => z <= '0'; 
+        when D => z <= '1'; 
+        when others => z <= '0';
+     end case;
+end process;
+end architecture;

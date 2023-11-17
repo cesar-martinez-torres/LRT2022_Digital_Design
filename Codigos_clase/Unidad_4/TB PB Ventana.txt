@@ -1,0 +1,59 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+
+entity testbench is
+end entity;
+
+architecture tb of testbench is
+
+component PBWC is
+port(
+    Clock,Reset, Press: in std_logic;
+    Open_CW: out std_logic;
+    Close_CCW: out std_logic;
+    );
+end component ;
+	
+signal Clock, Reset, Press : STD_LOGIC;
+signal Open_CW, Close_CCW : STD_LOGIC;
+
+begin
+uut: PBWC port map(
+Clock => Clock,
+Reset => Reset,
+Press => Press,
+Open_CW => Open_CW,
+Close_CCW => Close_CCW);
+
+Clk : process
+begin
+Clock <= '0';
+wait for 10 ns;
+Clock <= '1';
+wait for 10 ns;
+end process;
+
+stim : process
+begin
+
+Reset <= '0';
+Press <= '0';
+wait for 5 ns;
+Reset <= '1';
+Press <= '0';
+wait for 20ns;
+Reset <= '1';
+Press <= '1';
+wait for 5 ns;
+Reset <= '1';
+Press <= '0';
+wait for 15 ns;
+Reset <= '1';
+Press <= '1';
+wait for 5 ns;
+Reset <= '1';
+Press <= '0';
+wait for 10 ns;
+end process;
+end tb;

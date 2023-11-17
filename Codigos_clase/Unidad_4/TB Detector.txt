@@ -1,0 +1,59 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+
+entity testbench is
+end entity;
+
+architecture tb of testbench is
+
+component Det is
+port(
+    Clock,Reset, x: in std_logic;
+    z: out std_logic;
+    --Close_CCW: out std_logic;
+    );
+end component ;
+	
+signal Clock, Reset, z : STD_LOGIC;
+signal z : STD_LOGIC;
+
+begin
+uut: Det port map(
+Clock => Clock,
+Reset => Reset,
+x => x,
+z => z);
+--Close_CCW => Close_CCW);
+
+Clk : process
+begin
+Clock <= '0';
+wait for 10 ns;
+Clock <= '1';
+wait for 10 ns;
+end process;
+
+stim : process
+begin
+
+Reset <= '0';
+x <= '0';
+wait for 5 ns;
+Reset <= '1';
+x <= '0';
+wait for 20ns;
+Reset <= '1';
+x <= '1';
+wait for 5 ns;
+Reset <= '1';
+x <= '0';
+wait for 15 ns;
+Reset <= '1';
+x <= '1';
+wait for 5 ns;
+Reset <= '1';
+x <= '0';
+wait for 10 ns;
+end process;
+end tb;
