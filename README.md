@@ -1,5 +1,6 @@
 # Formatos_LRT2022
-Repository of Word and Tex formats for the LRT2022 Digital Design course, taught at Universidad de las Américas Puebla (UDLAP).## Template tex para reportes de laboratorio
+Repository of Tex formats for the LRT2022 Digital Design course, taught at Universidad de las Américas Puebla (UDLAP).
+
 Each template contains different folders:
 * **bib**: Includes the file `bibliografia.bib`. It is recommended to use a reference manager (JabRef, Zotero).
 * **bst**: Includes the file `IEEEtran.bst`, which is used to apply the IEEE transactions citation style. DO NOT modify this file to maintain the required format.
