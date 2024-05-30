@@ -1,22 +1,22 @@
 # Formatos_LRT2022
-Repositorio de formatos Word y Tex para el curso LRT2022 Diseño digital, impartido en Universidad de las Américas Puebla (UDLAP).
-## Template tex para reportes de laboratorio
-El template contiene diferentes carpetas
-* bib Incluye el archivo bibliografia.bib, es recomendable utilizar un gestor de referencias (JabRef, Zotero).
-* bst Incluye el el archivo IEEEtran.bst, el cual sirve para darle el estilo de citación de los transactions de IEEE, NO modificar para mantener el formato solicitado.
-* codigos Carpeta para agregar los códigos utilizados durante el proyecto, NO se recomienda colocar todo el código en el cuerpo del documento, para eso utilizar los anexos.
-* Imagenes Carpeta para colocar las imágenes utilizadas en el documento, se recomiendo utilizar .eps.
+Repository of Word and Tex formats for the LRT2022 Digital Design course, taught at Universidad de las Américas Puebla (UDLAP).## Template tex para reportes de laboratorio
+The template contains different folders:
+* **bib**: Includes the file `bibliografia.bib`. It is recommended to use a reference manager (JabRef, Zotero).
+* **bst**: Includes the file `IEEEtran.bst`, which is used to apply the IEEE transactions citation style. DO NOT modify this file to maintain the required format.
+* **codigos**: Folder for adding the codes used during the project. It is NOT recommended to place all the code in the body of the document; use the appendices for this purpose.
+* **Imagenes**: Folder for placing the images used in the document. It is recommended to use .eps format.
 
 El documento main.tex se encuentra comentado para su mejor comprensión.
-### ¿Cómo compilar?
-Se recomienda utilizar cualquiera de las siguientes opciones:
+### How to compile?
+It is recommended to use any of the following options:
+
 * [Overleaf][2]
 * [Texmaker][3]
 * [Visual studio code][4] + extensión [Latex workshop][5]
 
-Nota: Ver los procesos de creación de cuenta o instalación para cada método. Si son principiantes en el uso de Latex, se recomienda utilizar Overleaf.
+Note: See account creation or installation processes for each method. If you are beginners in using LaTeX, it is recommended to use Overleaf.
 
-La guía para referenciar, puede ser consultada en [IEEE Reference guide][1]
+he referencing guide can be consulted at  [IEEE Reference guide][1]
 
 [1]: https://ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE-Reference-Guide.pdf "Title"
 [2]: https://www.overleaf.com/ "Title"
