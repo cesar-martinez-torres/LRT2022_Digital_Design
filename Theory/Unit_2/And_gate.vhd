@@ -17,6 +17,6 @@ architecture arq_andGate of ent_andGate is
 
  begin
     
-    Y <= A AND B;
+    Y <= A and B;
 
 end arq_andGate; 
